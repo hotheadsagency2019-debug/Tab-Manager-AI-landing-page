@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Security Policy - Tab Manager</title>
+    <title>Privacy Policy - Tab Manager AI</title>
     <style>
         * {
             margin: 0;
@@ -154,29 +154,77 @@
 </head>
 <body>
     <div class="container">
-        <a href="#" class="back-link">← Back to Home</a>
+        <a href="#" class="back-link">&larr; Back to Home</a>
         
         <div class="header">
-            <h1>�� Security Policy</h1>
-            <div class="subtitle">Tab Manager Chrome Extension</div>
+            <h1>Privacy Policy</h1>
+            <div class="subtitle">Tab Manager AI &mdash; Chrome Extension</div>
         </div>
         
         <div class="last-updated">
-            Last Updated: [2025/09/08]
+            Last Updated: 2026/03/03
         </div>
         
         <div class="highlight">
-            <strong>Tab Manager is designed with security and privacy as our top priorities.</strong> This Security Policy outlines the comprehensive security measures implemented to protect your data and ensure safe operation of our Chrome browser extension.
+            <strong>Tab Manager AI is designed with security and privacy as our top priorities.</strong> This Privacy Policy describes what data the extension collects, how it is used, and how it is protected. Your collections and settings are stored locally on your device. The only external communication occurs when you use the optional AI tab grouping feature, which sends tab titles and URLs to OpenAI API for processing.
         </div>
+
+        <h2>Data Collection and Usage</h2>
+        
+        <h3>1. Data Stored Locally</h3>
+        <p>The following data is stored locally on your device using Chrome's secure storage APIs and is never transmitted to any server:</p>
+        <ul>
+            <li>Tab collections (names, tab titles, URLs, favicons)</li>
+            <li>User settings and preferences</li>
+            <li>Session history</li>
+            <li>Undo/redo action history</li>
+            <li>AI usage counters (for rate limiting)</li>
+        </ul>
+
+        <h3>2. Data Shared with Third Parties</h3>
+        <p>When you use the <strong>AI Group</strong> feature, the following data is sent to OpenAI API (<code>api.openai.com</code>) over an encrypted HTTPS connection:</p>
+        <ul>
+            <li>Tab titles</li>
+            <li>Tab URLs</li>
+            <li>Your grouping instruction (e.g., "group by project")</li>
+        </ul>
+        <p>This data is used solely to generate tab grouping suggestions. No other personal data is transmitted. The AI grouping feature is optional and limited to 3 uses per day. Data sent to OpenAI is subject to <a href="https://openai.com/privacy" target="_blank">OpenAI's Privacy Policy</a>.</p>
+
+        <h3>3. Data NOT Collected</h3>
+        <ul>
+            <li>No browsing history</li>
+            <li>No passwords or credentials</li>
+            <li>No personal information (name, email, etc.)</li>
+            <li>No cookies or tracking data</li>
+            <li>No telemetry or analytics data</li>
+            <li>No advertising identifiers</li>
+        </ul>
+
+        <h2>Permissions</h2>
+        
+        <h3>1. Permission Usage</h3>
+        <p>Each permission requested by the extension has a specific purpose:</p>
+        <ul>
+            <li><strong>tabs</strong> &mdash; Read open tab titles and URLs to display and organize them</li>
+            <li><strong>storage</strong> &mdash; Store collections, settings, and session history locally on your device</li>
+            <li><strong>alarms</strong> &mdash; Schedule auto-save and backup reminders</li>
+            <li><strong>contextMenus</strong> &mdash; Add right-click menu options for quick tab saving</li>
+            <li><strong>notifications</strong> &mdash; Send backup reminders when tabs haven't been saved. Can be disabled in settings</li>
+        </ul>
+
+        <h3>2. Host Permissions</h3>
+        <ul>
+            <li><strong>api.openai.com</strong> &mdash; Required for the AI-powered tab grouping feature. Used to send tab titles and URLs to OpenAI GPT-4o-mini for intelligent categorization. All communication uses HTTPS encryption</li>
+        </ul>
 
         <h2>Security Architecture</h2>
         
         <h3>1. Local-First Design</h3>
         <ul>
-            <li>All data processing occurs locally on your device</li>
-            <li>No data transmission to external servers</li>
-            <li>No cloud storage or remote processing</li>
-            <li>Complete offline functionality</li>
+            <li>All collections and settings are stored locally on your device</li>
+            <li>No user accounts or authentication required</li>
+            <li>No cloud storage or remote database</li>
+            <li>Extension works fully offline (except the optional AI grouping feature)</li>
         </ul>
 
         <h3>2. Data Isolation</h3>
@@ -184,7 +232,7 @@
             <li>Extension data is isolated from other browser data</li>
             <li>No access to browsing history, passwords, or personal information</li>
             <li>Sandboxed execution environment</li>
-            <li>Limited permissions scope</li>
+            <li>No cross-extension data sharing</li>
         </ul>
 
         <h2>Security Measures</h2>
@@ -193,27 +241,17 @@
         <ul>
             <li>All stored data uses Chrome's built-in encryption</li>
             <li>Local storage is protected by browser security</li>
-            <li>No plain text storage of sensitive information</li>
-            <li>Automatic encryption of exported data</li>
+            <li>All network communication with OpenAI API uses HTTPS encryption</li>
         </ul>
 
-        <h3>2. Permission Minimization</h3>
+        <h3>2. Code Security</h3>
         <ul>
-            <li>Only essential permissions are requested</li>
-            <li>Each permission has a specific, documented purpose</li>
-            <li>No unnecessary access to system resources</li>
-            <li>Regular permission audits</li>
-        </ul>
-
-        <h3>3. Code Security</h3>
-        <ul>
-            <li>No external dependencies or remote code execution</li>
-            <li>All code is static and locally stored</li>
-            <li>No dynamic code loading</li>
+            <li>All extension code is static and locally stored</li>
+            <li>No dynamic code loading or remote code execution</li>
             <li>Regular security reviews of source code</li>
         </ul>
 
-        <h3>4. Input Validation</h3>
+        <h3>3. Input Validation</h3>
         <ul>
             <li>All user inputs are validated and sanitized</li>
             <li>Protection against injection attacks</li>
@@ -221,91 +259,32 @@
             <li>Error handling without data exposure</li>
         </ul>
 
-        <h2>Data Protection</h2>
+        <h2>User Control</h2>
 
-        <h3>1. Storage Security</h3>
+        <h3>1. Your Rights</h3>
         <ul>
-            <li>Data stored using Chrome's secure storage APIs</li>
-            <li>No database connections or external storage</li>
-            <li>Automatic cleanup of temporary data</li>
-            <li>Secure deletion when data is removed</li>
+            <li>Complete control over your data at all times</li>
+            <li>Export your collections in JSON, CSV, Markdown, or TXT format</li>
+            <li>Delete any or all data at any time</li>
+            <li>AI grouping feature is entirely optional &mdash; the extension works fully without it</li>
+            <li>Uninstalling the extension removes all locally stored data</li>
         </ul>
 
-        <h3>2. Transmission Security</h3>
+        <h3>2. Data Retention</h3>
         <ul>
-            <li>No data transmission over networks</li>
-            <li>No external API calls</li>
-            <li>No telemetry or analytics data</li>
-            <li>Complete network isolation</li>
-        </ul>
-
-        <h3>3. Access Control</h3>
-        <ul>
-            <li>Only the extension can access its own data</li>
-            <li>No cross-extension data sharing</li>
-            <li>User-controlled data access</li>
-            <li>No administrative or system-level access</li>
-        </ul>
-
-        <h2>Vulnerability Management</h2>
-
-        <h3>1. Security Monitoring</h3>
-        <ul>
-            <li>Regular security assessments</li>
-            <li>Code review processes</li>
-            <li>Vulnerability scanning</li>
-            <li>Threat modeling</li>
-        </ul>
-
-        <h3>2. Update Security</h3>
-        <ul>
-            <li>Secure update mechanisms through Chrome Web Store</li>
-            <li>Code signing verification</li>
-            <li>Integrity checks for all updates</li>
-            <li>No automatic updates outside official channels</li>
-        </ul>
-
-        <h3>3. Incident Response</h3>
-        <ul>
-            <li>Immediate response to security issues</li>
-            <li>User notification of any security concerns</li>
-            <li>Rapid patch deployment</li>
-            <li>Transparent communication</li>
-        </ul>
-
-        <h2>Privacy Protection</h2>
-
-        <h3>1. Data Minimization</h3>
-        <ul>
-            <li>Only collect data necessary for functionality</li>
-            <li>No collection of personal information</li>
-            <li>No tracking or analytics</li>
-            <li>No data aggregation</li>
-        </ul>
-
-        <h3>2. User Control</h3>
-        <ul>
-            <li>Complete user control over data</li>
-            <li>Easy data export functionality</li>
-            <li>Simple data deletion</li>
+            <li>Data is retained only as long as the extension is installed</li>
+            <li>No data is retained on external servers after AI processing</li>
+            <li>Session history has automatic cleanup</li>
             <li>No data retention beyond user needs</li>
         </ul>
 
-        <h3>3. Transparency</h3>
-        <ul>
-            <li>Clear documentation of all data practices</li>
-            <li>Open source code availability</li>
-            <li>Regular security audits</li>
-            <li>Public security reports</li>
-        </ul>
-
-        <h2>Compliance and Standards</h2>
+        <h2>Compliance</h2>
 
         <h3>1. Regulatory Compliance</h3>
         <ul>
             <li>GDPR compliance for EU users</li>
             <li>CCPA compliance for California users</li>
-            <li>Chrome Web Store security requirements</li>
+            <li>Chrome Web Store Developer Program Policies</li>
             <li>Industry security best practices</li>
         </ul>
 
@@ -314,62 +293,17 @@
             <li>OWASP security guidelines</li>
             <li>Chrome extension security policies</li>
             <li>Web security standards</li>
-            <li>Data protection regulations</li>
-        </ul>
-
-        <h2>Threat Mitigation</h2>
-
-        <h3>1. Common Threats Addressed</h3>
-        <ul>
-            <li>Cross-site scripting (XSS) prevention</li>
-            <li>Injection attack protection</li>
-            <li>Data exfiltration prevention</li>
-            <li>Unauthorized access blocking</li>
-        </ul>
-
-        <h3>2. Security Controls</h3>
-        <ul>
-            <li>Input sanitization</li>
-            <li>Output encoding</li>
-            <li>Access restrictions</li>
-            <li>Error handling</li>
-        </ul>
-
-        <h3>3. Monitoring and Detection</h3>
-        <ul>
-            <li>Anomaly detection</li>
-            <li>Security event logging</li>
-            <li>Regular security assessments</li>
-            <li>Threat intelligence integration</li>
-        </ul>
-
-        <h2>User Responsibilities</h2>
-
-        <h3>1. Security Best Practices</h3>
-        <ul>
-            <li>Keep your browser updated</li>
-            <li>Use strong browser security settings</li>
-            <li>Regularly review extension permissions</li>
-            <li>Report any security concerns immediately</li>
-        </ul>
-
-        <h3>2. Data Protection</h3>
-        <ul>
-            <li>Regular backup of your collections</li>
-            <li>Secure storage of exported data</li>
-            <li>Careful handling of shared data</li>
-            <li>Regular review of stored information</li>
         </ul>
 
         <h2>Incident Reporting</h2>
 
         <div class="security-box">
-            <h3>If you discover a security vulnerability or have security concerns:</h3>
+            <h3>If you discover a security vulnerability or have privacy concerns:</h3>
             
-            <h4>1. Immediate Reporting</h4>
+            <h4>1. Contact</h4>
             <ul>
                 <li>Email: <strong>smmfedorova@gmail.com</strong></li>
-                <li>Subject: "Security Issue - Tab Manager"</li>
+                <li>Subject: "Security Issue - Tab Manager AI"</li>
                 <li>Include: Description, steps to reproduce, impact assessment</li>
             </ul>
 
@@ -378,50 +312,24 @@
                 <li>Acknowledgment within 24 hours</li>
                 <li>Initial assessment within 48 hours</li>
                 <li>Resolution timeline based on severity</li>
-                <li>Regular updates throughout process</li>
-            </ul>
-
-            <h4>3. Vulnerability Disclosure</h4>
-            <ul>
-                <li>Coordinated disclosure process</li>
-                <li>Credit for responsible disclosure</li>
-                <li>Public acknowledgment of fixes</li>
-                <li>Security advisory publication</li>
             </ul>
         </div>
 
-        <h2>Security Updates</h2>
-
-        <h3>1. Regular Updates</h3>
-        <ul>
-            <li>Monthly security reviews</li>
-            <li>Quarterly vulnerability assessments</li>
-            <li>Annual security audits</li>
-            <li>Continuous monitoring</li>
-        </ul>
-
-        <h3>2. Update Notification</h3>
-        <ul>
-            <li>Security updates through Chrome Web Store</li>
-            <li>User notification of critical updates</li>
-            <li>Detailed changelog for security fixes</li>
-            <li>Best practices recommendations</li>
-        </ul>
+        <h2>Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated "Last Updated" date. Continued use of the extension after changes constitutes acceptance of the updated policy.</p>
 
         <div class="contact-info">
             <h2>Contact Information</h2>
-            <p><strong>For security-related inquiries:</strong></p>
+            <p><strong>For privacy or security inquiries:</strong></p>
             <ul>
                 <li>Email: <strong>smmfedorova@gmail.com</strong></li>
                 <li>Response time: 24-48 hours</li>
-                <li>Confidentiality: All reports treated confidentially</li>
-                <li>Acknowledgment: Credit given for responsible disclosure</li>
             </ul>
         </div>
 
         <div class="footer">
-            <p><strong>Legal Disclaimer:</strong> This Security Policy is provided for informational purposes. While we implement comprehensive security measures, no system is 100% secure. Users should maintain their own security practices and report any concerns immediately.</p>
-            <p>By using Tab Manager, you acknowledge that you have read, understood, and agree to this Security Policy.</p>
+            <p>By using Tab Manager AI, you acknowledge that you have read, understood, and agree to this Privacy Policy.</p>
+            <p>&copy; 2026 Tab Manager AI. All rights reserved.</p>
         </div>
     </div>
 </body>
