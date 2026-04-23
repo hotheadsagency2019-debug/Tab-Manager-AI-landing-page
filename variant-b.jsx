@@ -31,7 +31,7 @@ function BNav() {
   return (
     <header style={bStyles.nav}>
       <div style={bStyles.navInner}>
-        <div style={bStyles.logo}>
+        <a href="https://chromewebstore.google.com/detail/tab-manager-ai-%E2%80%94-smart-ta/cpmfimlgpampehokljfcfjcdoknmjpdn" target="_blank" rel="noopener" style={{...bStyles.logo, textDecoration: 'none'}}>
           <div style={bStyles.logoMark}>
             <span style={{fontSize: 18, fontWeight: 700, color: 'white'}}>#</span>
           </div>
@@ -39,7 +39,7 @@ function BNav() {
             <span style={{fontSize: 15, fontWeight: 700, color: B_INK, letterSpacing: '-0.01em'}}>Tab Manager AI</span>
             <span style={{fontSize: 10.5, color: '#6b6a60', letterSpacing: '0.08em', textTransform: 'uppercase'}}>Smart Tab Organizer</span>
           </div>
-        </div>
+        </a>
         <nav style={bStyles.navLinks}>
           <a href="#features" style={bStyles.navLink}>Features</a>
           <a href="#how" style={bStyles.navLink}>How It Works</a>
@@ -85,6 +85,13 @@ function BHero() {
               <span style={{textDecoration: 'underline', textUnderlineOffset: 4}}>See how it works</span>
               <span>↓</span>
             </a>
+          </div>
+          <div style={bStyles.heroStars}>
+            <span style={bStyles.heroStarBadge}>
+              <span style={bStyles.heroStarIcons}>★★★★★</span>
+              <span style={bStyles.heroStarScore}>5.0</span>
+            </span>
+            <span style={bStyles.heroStarLabel}>Rated on Chrome Web Store</span>
           </div>
           <div style={bStyles.heroFactsRow}>
             <div style={bStyles.heroFact}>
@@ -607,6 +614,27 @@ const bStyles = {
   ctaLink: {
     display: 'inline-flex', alignItems: 'center', gap: 8,
     color: B_INK, fontSize: 15, fontWeight: 500, textDecoration: 'none',
+  },
+  heroStars: {
+    marginTop: 20, display: 'flex', alignItems: 'center', gap: 12,
+  },
+  heroStarBadge: {
+    display: 'inline-flex', alignItems: 'center', gap: 7,
+    background: 'white', border: '1px solid rgba(11,11,16,0.1)',
+    borderRadius: 999, padding: '6px 14px',
+    boxShadow: '0 2px 8px -2px rgba(11,11,16,0.1)',
+  },
+  heroStarIcons: {
+    color: '#f59e0b', fontSize: 15, letterSpacing: 1,
+  },
+  heroStarScore: {
+    fontFamily: "'JetBrains Mono', ui-monospace, monospace",
+    fontSize: 13, fontWeight: 600, color: B_INK,
+  },
+  heroStarLabel: {
+    fontSize: 13, color: '#6b6a60',
+    fontFamily: "'JetBrains Mono', ui-monospace, monospace",
+    letterSpacing: '0.04em',
   },
   heroFactsRow: {
     marginTop: 64, display: 'flex', gap: 48, borderTop: '1px solid rgba(11,11,16,0.1)', paddingTop: 24,
